@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './HomePage.css'; // Optional custom styles for HomePage
+import './HomePage.css';
 
 const HomePage = ({ onSearch, loading }) => {
     const [query, setQuery] = useState('');
@@ -12,17 +12,13 @@ const HomePage = ({ onSearch, loading }) => {
 
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
-            handleSearch();
+            handleSearch(); // Search on Enter key
         }
     };
 
     return (
         <div className="home-page">
-            <img 
-                src={require('../Assets/FlickFinderLogo.png')} 
-                alt="Flick Finder Logo" 
-                className="logo" // A class to style the logo
-            />
+            <img src={require('../Assets/FlickFinderLogo.png')} alt="Flick Finder Logo" className="logo" />
             <div className="search-container">
                 <input
                     type="text"
@@ -41,6 +37,10 @@ const HomePage = ({ onSearch, loading }) => {
 };
 
 export default HomePage;
+
+
+
+
 
 
 

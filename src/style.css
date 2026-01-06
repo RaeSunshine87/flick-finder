@@ -6,208 +6,115 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif; /* Using Lato font */
-    background-color: #0d0d0d; /* Dark background for the app */
-    color: #ffffff; /* Light text color */
+    background-color: #0d0d0d;      /* Dark background */
+    color: #ffffff;                  /* Light text color */
 }
 
 /* HEADER STYLES */
 .header {
-    background: #1a1a1a; /* Background color for header */
-    padding: 20px; /* Padding around the header */
+    background: #1a1a1a;            /* Header background */
+    padding: 20px;                  /* Padding for header */
 }
 
 .hero__nav {
     display: flex;
-    justify-content: space-between; /* Spaces out navigation items */
-    align-items: center; /* Centers vertically */
+    justify-content: space-between; /* Space between navigation items */
+    align-items: center;             /* Center align items vertically */
 }
 
 .hero__nav-list {
-    list-style: none; /* Removes bullet points */
-    display: flex; /* Inline navigation items */
-    gap: 25px; /* Spacing between items */
+    list-style: none;                /* Remove bullet points from list */
+    display: flex;                   /* Inline navigation */
+    gap: 25px;                      /* Space between items */
 }
 
 .hero__nav-item a {
-    color: #ff3366; /* Link color */
-    text-decoration: none; /* Removes underline */
-    font-weight: 500; /* Font weight */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: #ff3366;                 /* Link color */
+    text-decoration: none;           /* Remove underline */
+    font-weight: 500;               /* Font weight */
+    transition: color 0.3s ease;    /* Smooth color transition */
 }
 
 .hero__nav-item a:hover {
-    color: #ff9999; /* Color change on hover */
+    color: #ff9999;                 /* Color change on hover */
 }
 
 /* HERO SECTION STYLES */
 .hero {
-    text-align: center; /* Center-align content */
-    padding: 60px 20px; /* Padding for hero section */
+    text-align: center;              /* Center-align content */
+    padding: 60px 20px;             /* Padding for hero section */
 }
 
 .hero__content {
-    margin-top: 80px; /* Margin above content */
+    margin-top: 80px;               /* Margin above content */
 }
 
 /* HOME PAGE STYLES */
 .home-page {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align items */
-    justify-content: center; /* Vertically center */
-    min-height: 100vh; /* Full viewport height */
+    flex-direction: column;          /* Stack elements vertically */
+    align-items: center;             /* Center-align items */
+    justify-content: center;         /* Vertically center */
+    min-height: 100vh;              /* Full viewport height */
     background: url('./Assets/FFBackground.png') center/cover no-repeat; /* Movie-themed background */
 }
 
 .logo {
-    width: 300px; /* Adjust the width of your logo */
-    margin-bottom: 20px; /* Space below the logo */
+    width: 300px;                   /* Logo width */
+    margin-bottom: 20px;            /* Space below the logo */
 }
 
 /* SEARCH BAR STYLES */
-.hero__search {
-    display: flex; /* Flexbox for input and button */
-    justify-content: center; /* Center alignment */
-    align-items: center; /* Center on the cross axis */
-    margin-top: 20px; /* Space above the search bar */
+.search-container {
+    display: flex;                   /* Flexbox for search input and button */
+    justify-content: center;         /* Center alignment */
+    align-items: center;             /* Center on the cross axis */
+    margin-top: 20px;               /* Space above the search bar */
 }
 
 .search-input {
-    padding: 10px; /* Padding inside input */
-    border-radius: 4px; /* Rounded corners */
-    border: 1px solid #ccc; /* Light border */
-    width: 300px; /* Fixed width */
+    padding: 10px;                  /* Padding inside input */
+    border-radius: 4px;             /* Rounded corners */
+    border: 1px solid #ccc;         /* Light border */
+    width: 300px;                   /* Fixed width for input */
 }
 
 .search-btn {
-    padding: 10px; /* Padding inside button */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    background-color: #ff3366; /* Button background color */
-    color: white; /* Text color for the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-left: 10px; /* Space between input and button */
+    padding: 10px;                  /* Padding inside button */
+    border: none;                   /* No border */
+    border-radius: 4px;             /* Rounded corners */
+    background-color: #ff3366;      /* Button background color */
+    color: white;                   /* Button text color */
+    cursor: pointer;                /* Change cursor on hover */
+    margin-left: 10px;              /* Space between input and button */
 }
 
 .search-btn:disabled {
-    background-color: #999; /* Disabled button state */
+    background-color: #999;         /* Style for disabled state */
 }
 
 /* MOVIES GRID STYLES */
 .movies__grid {
-    display: grid; /* Grid layout for movie cards */
+    display: grid;                  /* Grid layout for movie cards */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between the cards */
-    padding: 20px; /* Padding around the grid */
+    gap: 20px;                     /* Space between movie cards */
+    padding: 20px;                 /* Padding for the grid */
 }
 
 /* MOVIE CARD STYLES */
 .movies__card {
-    background: #1a1a1a; /* Dark background for each card */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Prevents overflow */
-    padding: 15px; /* Padding inside the card */
-    cursor: pointer; /* Pointer cursor on hover */
+    background: #1a1a1a;           /* Dark background for each card */
+    border-radius: 8px;            /* Rounded corners */
+    overflow: hidden;               /* Prevent overflow */
+    padding: 15px;                 /* Internal padding */
+    cursor: pointer;                /* Pointer cursor on hover */
+    transition: transform 0.3s ease; /* Smooth scale effect on hover */
 }
 
-.movies__img {
-    width: 100%; /* Full width for images */
-    height: auto; /* Automatic height */
-}
-
-.movies__title {
-    color: #ff3366; /* Title color */
-    font-size: 1.1rem; /* Title font size */
-    margin: 10px 0 0; /* Margin for above and below */
-}
-
-.movies__year {
-    color: #ccc;
+.movies__card:hover {
+    transform: scale
 }
 
 
-/* MOVIES GRID STYLES */
-.movies__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid settings */
-    gap: 20px;                   /* Space between movie cards */
-    padding: 20px;               /* Padding for the grid */
-}
-
-/* MOVIE CARD STYLES */
-.movies__card {
-    background: #1a1a1a;         /* Dark background for cards */
-    border-radius: 8px;          /* Rounded corners */
-    overflow: hidden;
-}
-
-.contact-page {
-    padding: 20px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column; /* Stack inputs vertically */
-    gap: 15px;             /* Space between inputs */
-}
-
-.contact-form label {
-    font-weight: bold;      /* Bold labels */
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;         /* Internal padding for input fields */
-    border: 1px solid #ccc; /* Border for inputs */
-    border-radius: 5px;    /* Rounded corners */
-    width: 100%;           /* Full width */
-}
-
-/* MoviePopup.css */
-
-.modal {
-    display: flex; /* Show modal */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
-    justify-content: center; /* Center modal content */
-    align-items: center; /* Center modal content */
-}
-
-.modal__content {
-    background: #1a1a1a; /* Dark background for modal content */
-    color: #fff; /* White text color */
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 700px; /* Max width of modal */
-    width: 90%; /* Full width, limited by max-width */
-    position: relative; /* Relative position for closing button */
-}
-
-.modal__close {
-    position: absolute; /* Position close button in top right */
-    top: 10px;
-    right: 15px;
-    color: #ff3366; /* Color for close button */
-    font-size: 1.8rem; /* Size of close button */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.modal__poster {
-    width: 100%; /* Full width poster */
-    border-radius: 10px;
-    margin-bottom: 15px; /* Space below image */
-}
-
-.modal__info {
-    margin: 10px 0; /* Margin for info section */
-}
-
-.modal__title {
-    font-size: 1.5rem; /* Title size */
-}
 
 

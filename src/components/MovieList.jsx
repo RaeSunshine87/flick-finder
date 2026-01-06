@@ -24,7 +24,7 @@ const MovieList = ({ movies }) => {
     );
 };
 
-export default MovieList; // Ensure this is exported
+export default MovieList; // Export the MovieList component
 
 
 
