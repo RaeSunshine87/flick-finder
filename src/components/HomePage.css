@@ -1,41 +1,44 @@
+/* HomePage.css */
+
 .home-page {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    min-height: 100vh; /* Full viewport height */
+    background: url('../Assets/FFBackground.png') center/cover no-repeat; /* Movie-themed background */
+    color: white; /* Text color */
 }
 
-.home-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
+.logo {
+    width: 300px; /* Adjust the width of your logo */
+    margin-bottom: 20px; /* Space below the logo */
 }
 
 .search-container {
-    display: flex;
+    display: flex; /* Flexbox to arrange search input and button */
     justify-content: center;
-    margin-top: 20px; /* Space between image and search bar */
+    align-items: center;
+    margin-top: 20px; /* Spacing above the search bar */
 }
 
 .search-input {
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    width: 300px; /* Set a width for the search input */
+    padding: 10px; /* Padding inside input */
+    border-radius: 4px; /* Slightly round edges */
+    border: 1px solid #ccc; /* Border */
+    width: 300px; /* Fixed width for the input */
 }
 
 .search-btn {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #ff3366;
-    color: white;
-    cursor: pointer;
+    padding: 10px; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 4px; /* Round edges on button */
+    background-color: #ff3366; /* Button color */
+    color: white; /* Text color for the button */
+    cursor: pointer; /* Cursor changes to pointer on hover */
     margin-left: 10px; /* Space between input and button */
 }
 
 .search-btn:disabled {
     background-color: #999; /* Style for disabled state */
 }
-

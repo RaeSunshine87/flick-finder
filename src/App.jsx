@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-import HomePage from './components/HomePage'; // Ensure this path is correct
-import FindYourFlick from './components/FindYourFlick'; // Ensure this path is correct
-import ContactPage from './components/ContactPage'; // Ensure this path is correct
-import './style.css'; // Ensure this path is correct
+import HomePage from './components/HomePage'; // Import Home Page component
+import FindYourFlick from './components/FindYourFlick'; // Import Find Your Flick component
+import ContactPage from './components/ContactPage'; // Import Contact Page component
+import './style.css'; // Import global styles
 
 const apiKey = "e19fddd4"; // Your OMDb API key
 
@@ -13,7 +13,6 @@ const App = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
-    // Function to search movies
     const searchMovies = async (query) => {
         if (!query) return;
         setLoading(true);
@@ -38,13 +37,6 @@ const App = () => {
     return (
         <Router>
             <div>
-                <header className="hero">
-                    <nav className="hero__nav">
-                        <Link to="/">Home</Link>
-                        <Link to="/find-your-flick">Find Your Flick</Link>
-                        <Link to="/contact">Contact</Link>
-                    </nav>
-                </header>
                 <Routes>
                     <Route path="/" element={<HomePage onSearch={searchMovies} loading={loading} />} />
                     <Route path="/find-your-flick" element={<FindYourFlick movies={movies} onSearch={searchMovies} />} />
@@ -57,4 +49,8 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
 

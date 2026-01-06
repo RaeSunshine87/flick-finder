@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './HomePage.css'; // Optional custom styles for HomePage
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesome icon component
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'; // Import the specific icon
 
 const HomePage = ({ onSearch, loading }) => {
     const [query, setQuery] = useState('');
@@ -20,7 +18,11 @@ const HomePage = ({ onSearch, loading }) => {
 
     return (
         <div className="home-page">
-            <img src={require('../Assets/FFBackground.png')} alt="Flick Finder" className="home-image" />
+            <img 
+                src={require('../Assets/FlickFinderLogo.png')} 
+                alt="Flick Finder Logo" 
+                className="logo" // A class to style the logo
+            />
             <div className="search-container">
                 <input
                     type="text"
@@ -30,16 +32,8 @@ const HomePage = ({ onSearch, loading }) => {
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyPress={handleKeyPress}
                 />
-                <button 
-                    className="search-btn" 
-                    onClick={handleSearch} 
-                    disabled={loading}
-                >
-                    {loading ? (
-                        <span>Searching...</span>
-                    ) : (
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    )}
+                <button className="search-btn" onClick={handleSearch} disabled={loading}>
+                    {loading ? 'Searching...' : 'Search'}
                 </button>
             </div>
         </div>
@@ -47,6 +41,8 @@ const HomePage = ({ onSearch, loading }) => {
 };
 
 export default HomePage;
+
+
 
 
 
