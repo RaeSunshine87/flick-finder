@@ -1,0 +1,102 @@
+/* style.css */
+
+/* Hero section styling */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Home Page specific styling */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.home-image {
+    width: 100%;
+    max-height: 400px; /* Adjust based on your design */
+    object-fit: cover;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff3366;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Movie list styling */
+.movies__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Movie Card styling */
+.movies__card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    border: 1px solid #333; /* Optional border for cards */
+}
+
+.movies__card img {
+    width: 100%;
+    height: auto;
+}
+
+.movies__title {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.movies__year {
+    color: #ccc;
+}
+
+/* Modal styling for MoviePopup */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.modal__title {
+    font-size: 1.5rem;
+}

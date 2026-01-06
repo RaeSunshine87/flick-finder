@@ -1,13 +1,25 @@
+/* index.css */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* You can also use a custom font */
+    background-color: #0d0d0d;     /* Dark background for the app */
+    color: #ffffff;                 /* Light text color for contrast */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+    text-decoration: none;           /* Remove default link styling */
+    color: #ff3366;                  /* Color for links */
 }
+
+.nav-link:hover {
+    color: #ff9999;                  /* Lighter shade on hover */
+}
+
+h2 {
+    color: #ff3366;                  /* Heading color */
+}
+
+/* Additional global styles can go here */
