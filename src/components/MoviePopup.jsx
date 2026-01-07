@@ -2,8 +2,10 @@ import React from 'react';
 
 
 const MoviePopup = ({ movie, onClose }) => {
+    if (!movie) return null; // Safeguard: only render if a movie is provided
+
     return (
-        <div className="modal" style={{ display: 'flex' }}>
+        <div className="modal">
             <div className="modal__content">
                 <span className="modal__close" onClick={onClose}>&times;</span>
                 <img 
@@ -25,5 +27,7 @@ const MoviePopup = ({ movie, onClose }) => {
 };
 
 export default MoviePopup;
+
+
 
 

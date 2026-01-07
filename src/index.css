@@ -18,8 +18,16 @@ a {
     color: #ff9999;                  /* Lighter shade on hover */
 }
 
-h2 {
+h2,
+h3 {
     color: #ff3366;                  /* Heading color */
+  }
+
+h2,
+h3,
+p {
+  display: flex;
+  justify-content: center;
 }
 
 /* Additional global styles can go here */

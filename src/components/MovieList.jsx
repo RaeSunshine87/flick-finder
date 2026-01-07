@@ -1,11 +1,15 @@
 import React from 'react';
 
-const MovieList = ({ movies }) => {
+const MovieList = ({ movies, onMovieClick }) => {
     return (
         <div className="movies__grid">
             {movies.length > 0 ? (
                 movies.map(movie => (
-                    <div key={movie.imdbID} className="movies__card">
+                    <div
+                        key={movie.imdbID}
+                        className="movies__card"
+                        onClick={() => onMovieClick(movie)} // Pass the clicked movie to the handler
+                    >
                         <img 
                             className="movies__img" 
                             src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/200x300"} 
@@ -24,7 +28,8 @@ const MovieList = ({ movies }) => {
     );
 };
 
-export default MovieList; // Export the MovieList component
+export default MovieList;
+
 
 
 

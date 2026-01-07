@@ -43,7 +43,7 @@ const App = () => {
             <div>
                 <Routes>
                     <Route path="/" element={<HomePage onSearch={searchMovies} loading={loading} />} />
-                    <Route path="/find-your-flick" element={<FindYourFlick movies={movies} />} />
+                    <Route path="/find-your-flick" element={<FindYourFlick movies={movies} onSearch={searchMovies} loading={loading} />} />
                     <Route path="/contact" element={<ContactPage />} />
                 </Routes>
                 {error && <p style={{ color: 'red' }}>{error}</p>} 
