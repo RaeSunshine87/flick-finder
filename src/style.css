@@ -155,7 +155,6 @@ body {
 }
 
 /* Modal */
-
 .modal {
     display: none;
     position: fixed;
@@ -194,6 +193,12 @@ body {
 .modal__poster {
     width: 100%;
     border-radius: 8px;
+}
+
+/* CONTACT */
+.contact__para {
+  display: flex;
+  justify-content: center;
 }
 
 

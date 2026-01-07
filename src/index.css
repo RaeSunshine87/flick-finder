@@ -24,8 +24,7 @@ h3 {
   }
 
 h2,
-h3,
-p {
+h3 {
   display: flex;
   justify-content: center;
 }

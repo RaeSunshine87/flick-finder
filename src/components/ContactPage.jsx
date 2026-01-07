@@ -7,7 +7,7 @@ const ContactPage = () => {
         <div>
             <Header />
             <h2>Contact Us</h2>
-            <p>If you have any inquiries, please reach out to us!</p>
+            <p className="contact__para">If you have any inquiries, please reach out to us!</p>
             {/* You can add a contact form or additional information here */}
         </div>
     );
