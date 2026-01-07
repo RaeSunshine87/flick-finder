@@ -12,6 +12,7 @@ const App = () => {
     const [movies, setMovies] = useState([]); 
     const [loading, setLoading] = useState(false); 
     const [error, setError] = useState(''); 
+    const navigate = useNavigate();
 
     const searchMovies = async (query) => {
         if (!query) return;
@@ -25,6 +26,7 @@ const App = () => {
 
             if (data.Search) {
                 setMovies(data.Search); 
+                navigate("/find-your-flick");
             } else {
                 setError('No results found.'); 
                 setMovies([]); 
