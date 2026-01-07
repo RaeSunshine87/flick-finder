@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import FindYourFlick from './components/FindYourFlick'; 
 import ContactPage from './components/ContactPage'; 
 import './style.css'; 
+import { useNavigate } from "react-router-dom";
 
 const apiKey = "e19fddd4"; // Your OMDb API key
 
@@ -39,7 +40,6 @@ const App = () => {
     };
 
     return (
-        <Router>
             <div>
                 <Routes>
                     <Route path="/" element={<HomePage onSearch={searchMovies} loading={loading} />} />
@@ -48,7 +48,6 @@ const App = () => {
                 </Routes>
                 {error && <p style={{ color: 'red' }}>{error}</p>} 
             </div>
-        </Router>
     );
 };
 
