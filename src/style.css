@@ -179,6 +179,8 @@ body {
     position: relative; /* For positioning the close button */
     display: flex;
     gap: 15px;
+    flex-direction: column;
+
 }
 
 .modal__close {
